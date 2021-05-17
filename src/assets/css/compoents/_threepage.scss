@@ -1,0 +1,210 @@
+.threepage{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-image: url('/img/mainpage/1.jpg');
+    background-repeat: no-repeat;
+    background-size: 325%;
+    .top{
+        height: 75px;
+        color: white;
+        padding: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-position: bottom left;
+        background-position-x: -80px;
+        background-image: url('/img/twopage/1.jpg');
+        
+        border-bottom: 2px solid $main-color;
+        @media (min-width:768px) {
+            height: 100px;
+        }
+        h2{
+            margin: 0;
+        }
+        span{
+        }
+    }
+    .top-container{
+        height: 60px;
+        display: flex;
+        padding: 10px;
+        @media (min-width:768px) {
+            height: 85px;
+        }
+        .left{
+            width: 70%;
+            div:nth-child(1){
+                margin: 5px 0;
+                .title{
+                    font-size: 5vmin;
+                    font-weight: 700;
+                    @media (max-width:900px) {
+                        font-size: 5vmin;
+                    }
+                }
+                .sub-title{
+                    font-size: 3vmin;
+                    margin-left: 5px;
+                }
+            }
+            div:nth-child(2){
+                border-top: 2px solid $main-color;
+                position: relative;
+                .top-canvas{
+                    position: absolute;
+                    top: -9px;
+                    background-color: $main-color;
+                    height:7px;
+                    width: 8vw;
+                    left: 75%;
+                    @media (min-width:1024px) {
+                        top: -10px;
+                        height: 8px;
+                        width: 3vw;
+                    }
+                }
+            }
+        }
+        .right{
+            width: 30%;
+            height: 100%;
+            position: relative;
+            .top-right-canvas{
+                width: 35px;
+                height: 35px;
+                background-color: $main-color;
+                position: absolute;
+                @media (min-width:768px) {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            .top-right-canvas:nth-child(odd){
+                top: 35%;
+            }
+            .top-right-canvas:nth-child(even){
+                opacity: 0.5;
+            }
+            .top-right-canvas:nth-child(4){
+                left: 45%;
+            }
+            .top-right-canvas:nth-child(2){
+                top: 5%;
+                left: 20%;
+            }
+            .top-right-canvas:nth-child(3){
+                left: 55%;
+            }
+            .top-right-canvas:nth-child(1){
+                top: 50%;
+                left: 30%;
+            }
+            @for $i from 1 through 4 {
+                .top-right-canvas:nth-child(#{$i}){
+                    transform: scale(calc(#{$i}*0.2));   
+                    animation: opacity ease 5s infinite;
+                    animation-delay: #{$i}s;
+                }
+            }
+        }
+    }
+    .mid{
+        flex-grow: 1;
+        padding: 0px 20px;
+        @media (min-width:1100px) {
+            padding: 10px 50px;
+        }
+        .img-container{
+            position: relative;
+            width: 100%;
+            height: 45%;
+            overflow: hidden;
+            border-radius: 24px;
+            img{
+                position: absolute;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+        }
+        .content{
+            padding: 10px;
+            margin-top: 15px;
+            font-size: 4vmin;
+            @media (min-width:1100px) {
+                font-size: 3vmin;
+            }
+        }
+    }
+    .bottom{
+        color: white;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #519FC2;
+        font-size: 3vmin;
+        @media (min-width:768px) {
+            height: 45px;
+            font-size: 20px;
+        }
+        button{
+            margin-left: 10px;
+        }
+        span{
+            margin-left: 10px;
+        }
+        span:nth-child(1){
+            padding-left: 20px;
+            flex-grow: 3;
+        }
+        button{
+            background-color: transparent;
+            color: white;
+            border: none;
+            font-size: 3vmin;
+            flex-grow: 1;
+            cursor: pointer;
+            transition: all .3s;
+            font-weight: 700;
+            animation: opacity ease infinite 3s ;
+            @media (min-width:768px) {
+                flex-grow: 0.2;
+                font-size: 20px;
+                &:hover{
+                    font-size: 24px;
+                }
+            }
+            @keyframes opacity {
+                0%{
+                    opacity: 1;
+                }
+                25%{
+                    opacity: 0;
+                }
+                50%{
+                    opacity: 1;
+                }
+                75%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+        }
+        .canvas{
+            background-color: white;
+            flex-grow: 0.3;
+            height: 100%;
+            @media (min-width:768px) {
+                flex-grow: 0.1;
+            }
+        }
+    }
+    
+}

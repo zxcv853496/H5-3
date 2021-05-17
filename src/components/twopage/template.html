@@ -1,0 +1,15 @@
+<div class="twopage">
+    <div class="top">
+        <h2>目錄</h2>
+        <span>/CATALOG</span>
+    </div>
+    <div class="mid">
+        <div class="content" v-on:click=thispageMoveto(item.page)
+        v-for="item in items " :key="item.index">
+            <span>{{item.title}}</span><span>{{item.page}}</span>
+        </div>
+    </div>
+    <div class="bottom">
+        - 泳欣事業有限公司 -
+    </div>
+</div>

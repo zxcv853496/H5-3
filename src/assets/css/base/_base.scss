@@ -1,0 +1,15 @@
+body{
+    padding: 0;
+    margin: 0 auto;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 768px;
+    font-family: $font;
+    @media (min-width:769px) {
+        border: 2px solid black;
+        border-top: none;
+        border-bottom: none;
+    }
+}

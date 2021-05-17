@@ -1,28 +1,67 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <full-page :options="options" ref="fullpage" >
+        <div class="section" >
+          <Mainpage/>
+        </div>  
+        <div class="section" >
+          <Twopage :pageMoveto="pageMoveto"/>
+        </div>         
+        <div class="section" >
+          <Threepage :pageBackIndex="pageBackIndex"/>
+        </div>      
+        <div class="section" >
+          <Fourpage :pageBackIndex="pageBackIndex"/>
+        </div>     
+        <div class="section" >
+          <Fivepage :pageBackIndex="pageBackIndex"/>
+        </div>     
+      </full-page>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import './assets/css/app.scss'
+import Mainpage from './components/mainpage/index'
+import Twopage from './components/twopage/index'
+import Threepage from './components/threepage/index'
+import Fourpage from './components/fourpage/index'
+import Fivepage from './components/fivepage/index'
 
 export default {
+  data(){
+    return {
+      options: {
+        licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
+        //是否顯示導航，預設為false
+        navigation: true,
+        
+        //頁面滾動速度
+        scrollingSpeed: 700,
+        //動畫
+        controlArrows: true,
+        loopBottom:true,
+        loopTop:true ,
+        onLeave: this.movePage,
+        afterLoad: this.movePageAfter,
+      },
+    }
+  },
   name: 'App',
   components: {
-    HelloWorld
+    Mainpage,
+    Twopage,
+    Threepage,
+    Fourpage,
+    Fivepage,
+  },
+  methods:{
+    pageBackIndex(){
+      this.$refs.fullpage.api.moveTo(2);
+    },
+    pageMoveto(index){
+      this.$refs.fullpage.api.moveTo(index);
+    },
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
