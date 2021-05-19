@@ -1,0 +1,10 @@
+<div class="sevenpage">
+    <slick ref="slick" :options="slickOptions">
+        <div v-for="(i, index) in list" :key="index">
+          <img :src="i.img">
+        </div>
+      </slick>
+      <button v-on:click=pageMove()>
+          < < 返回目錄
+      </button>
+</div>

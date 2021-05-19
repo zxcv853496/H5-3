@@ -3,6 +3,8 @@ import App from './App.vue'
 import 'fullpage.js/vendors/scrolloverflow';
 import VueFullpage from 'vue-fullpage.js'
 import animate from 'animate.css'
+import "slick-carousel/slick/slick.css";
+
 
 Vue.use(animate)
 

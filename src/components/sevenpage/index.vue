@@ -9,15 +9,12 @@ export default {
   components: { Slick },
   data() {
     return {
-        mobil_active:false,
-        slickOptions: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 1000,
-            arrows:false,
-            pauseOnDotsHover:true,
-        },
+      slickOptions: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        autoplay: true,
+        autoplaySpeed: 1000,
+      },
         list:[
             {
                 img:'/img/fivepage/card1.jpg'
@@ -46,13 +43,7 @@ export default {
     methods:{
         pageMove(){
             this.pageBackIndex()
-        },
-        handleTouchstart(){
-            this.mobil_active =! this.mobil_active
-        },
-        handleTouchend(){
-            this.mobil_active =! this.mobil_active
-        },
+        }
     }
 };
 </script>

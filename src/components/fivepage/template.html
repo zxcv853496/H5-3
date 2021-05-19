@@ -6,8 +6,8 @@
     <div class="top-container">
         <div class="left">
             <div>
-                <span class="title">公司簡介</span>
-                <span class="sub-title">/COMPANY PROFILE</span>
+                <span class="title">名片製作</span>
+                <span class="sub-title">/COMPANY PRODUCT</span>
             </div>
             <div>
                 <div class="top-canvas"></div>
@@ -21,6 +21,27 @@
         </div>
     </div>
     <div class="mid">
+        <div class="top">
+            <p>名片展示</p>
+        </div>
+        <div class="mid">
+            <div class="left">
+                在一個品牌的誕生後，我們會全力以赴去尋找一個方向，讓品牌的誕生更加完整，具體,在LOGO設計，等相關事務用品上，我們會是你最好的夥伴。
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="cards"
+            :class="{'active':mobil_active}"
+            @touchstart="handleTouchstart"
+            @touchend="handleTouchend">
+                <slick ref="slick"  :options="slickOptions">
+                    <div v-for="(i, index) in list" :key="index">
+                      <img :src="i.img" :class="{'active':mobil_active}">
+                    </div>
+                  </slick>
+            </div>
+        </div>
+
     </div>
     <div class="bottom">
         <span>

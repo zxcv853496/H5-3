@@ -15,6 +15,12 @@
         </div>     
         <div class="section" >
           <Fivepage :pageBackIndex="pageBackIndex"/>
+        </div>    
+        <div class="section" >
+          <Sixpage :pageBackIndex="pageBackIndex"/>
+        </div>     
+        <div class="section" >
+          <Sevenpage :pageBackIndex="pageBackIndex"/>
         </div>     
       </full-page>
   </div>
@@ -27,6 +33,8 @@ import Twopage from './components/twopage/index'
 import Threepage from './components/threepage/index'
 import Fourpage from './components/fourpage/index'
 import Fivepage from './components/fivepage/index'
+import Sixpage from './components/sixpage/index'
+import Sevenpage from './components/sevenpage/index'
 
 export default {
   data(){
@@ -54,6 +62,8 @@ export default {
     Threepage,
     Fourpage,
     Fivepage,
+    Sixpage,
+    Sevenpage
   },
   methods:{
     pageBackIndex(){
