@@ -165,7 +165,9 @@
                                 position: relative;
                                 overflow: hidden;
                                 img{
-                                    position: relative;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
                                     width: 100%;
                                     height: 100%;
                                     object-fit: cover;
@@ -177,7 +179,7 @@
                                     }
                                     @media (max-width:768px) {
                                         &.active{
-                                            transform: scale(1.25);
+                                            transform: scale(1.2);
                                         }
                                     }
 
