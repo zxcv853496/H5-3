@@ -1,10 +1,65 @@
 <div class="sevenpage">
-    <slick ref="slick" :options="slickOptions">
-        <div v-for="(i, index) in list" :key="index">
-          <img :src="i.img">
+    <div class="top animate__animated"
+    :class="{'animate__fadeInDown ':active}">
+        <span class="animate__animated animate__slow"
+        :class="{'animate__fadeInLeft ':active}">ENTERPRISE</span>
+        <h2 class="animate__animated animate__slow"
+        :class="{'animate__fadeInLeft ':active}">PROPAGANDA</h2>
+    </div>
+    <div class="top-container">
+        <div class="left" >
+            <div class="animate__animated animate__slow"
+            :class="{'animate__fadeInLeftBig ':active}">
+                <span class="title">公司產品</span>
+                <span class="sub-title">/COMPANY PRODUCT</span>
+            </div>
+            <div>
+                <div class="top-canvas animate__animated animate__slow"
+                :class="{'animate__fadeInLeftBig ':active}"></div>
+            </div>
         </div>
-      </slick>
+        <div class="right">
+            <div class="top-right-canvas"></div>
+            <div class="top-right-canvas"></div>
+            <div class="top-right-canvas"></div>
+            <div class="top-right-canvas"></div>
+        </div>
+    </div>
+    <div class="mid">
+        <div class="top">
+            <div class="right">
+                <h2 class="animate__animated animate__slow"
+                :class="{'animate__fadeInLeft':active}">網頁展示</h2>
+                <p class="animate__animated animate__slow"
+                :class="{'animate__fadeInRight':active}">WEB</p>
+                <p class="animate__animated animate__slow"
+                :class="{'animate__fadeInRight':active}">BROCHURE</p>
+            </div>
+            <div class="left animate__animated animate__slow"
+            :class="{'animate__fadeInLeft':active}">
+                <img src="/img/sixpage/6-6.jpg" alt="">
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="right container animate__animated animate__slow"
+            :class="{'animate__fadeInUp':active}">
+                <img src="/img/sixpage/6-4.jpg" alt="">
+            </div>
+            <div class="left container animate__animated animate__slow"
+            :class="{'animate__fadeInRight':active}">
+                <img src="/img/sixpage/6-3.jpg" alt="">
+            </div>
+        </div>
+    </div>
+  <div class="bottom animate__animated animate__slow"
+  :class="{'animate__slideInLeft':active}">
+      <span>
+          泳欣事業有限公司
+      </span>
+      <span class="canvas animate__animated animate__slow"
+      :class="{'animate__fadeInRightBig':active}"></span>
       <button v-on:click=pageMove()>
           < < 返回目錄
       </button>
+  </div>
 </div>

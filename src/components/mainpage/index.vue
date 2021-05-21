@@ -10,6 +10,9 @@ export default {
             timer:0,
         }
     },
+    props:[
+        'active',
+    ],
     created (){
         this.timer = setInterval(this.midimgMover, 4000)
     },

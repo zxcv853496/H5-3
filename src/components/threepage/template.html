@@ -1,16 +1,21 @@
 <div class="threepage">
-    <div class="top">
-        <span>ENTERPRISE</span>
-        <h2>PROPAGANDA</h2>
+    <div class="top animate__animated"
+    :class="{'animate__fadeInDown ':active}">
+        <span class="animate__animated animate__slow"
+        :class="{'animate__fadeInLeft ':active}">ENTERPRISE</span>
+        <h2 class="animate__animated animate__slow"
+        :class="{'animate__fadeInLeft ':active}">PROPAGANDA</h2>
     </div>
     <div class="top-container">
-        <div class="left">
-            <div>
+        <div class="left" >
+            <div class="animate__animated animate__slow"
+            :class="{'animate__fadeInLeftBig ':active}">
                 <span class="title">公司簡介</span>
                 <span class="sub-title">/COMPANY PROFILE</span>
             </div>
             <div>
-                <div class="top-canvas"></div>
+                <div class="top-canvas animate__animated animate__slow"
+                :class="{'animate__fadeInLeftBig ':active}"></div>
             </div>
         </div>
         <div class="right">
@@ -21,18 +26,22 @@
         </div>
     </div>
     <div class="mid">
-        <div class="img-container">
+        <div class="img-container animate__animated animate__slow"
+        :class="{'animate__zoomIn':active}" >
             <img src="/img/threepage/2.jpg" alt="">
         </div>
-        <div class="content">
+        <div class="content animate__animated animate__slow"
+        :class="{'animate__slideInRight':active}">
             跨越變化莫測的海洋，才能到另一片大陸實踐夢想，找到耀眼的寶藏。 為之瘋狂的品牌魅力在於，我們一起經歷的大風大浪與無數波折之後，在成為頂尖品牌的路上，看到的美麗與感動。
         </div>
     </div>
-    <div class="bottom">
+    <div class="bottom animate__animated animate__slow"
+    :class="{'animate__slideInLeft':active}">
         <span>
             泳欣事業有限公司
         </span>
-        <span class="canvas animate__animated animate__slideInRight"></span>
+        <span class="canvas animate__animated animate__slow"
+        :class="{'animate__fadeInRightBig':active}"></span>
         <button v-on:click=pageMove()>
             < < 返回目錄
         </button>

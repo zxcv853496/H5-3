@@ -1,16 +1,21 @@
 <div class="fourpage">
-    <div class="top">
-        <span>ENTERPRISE</span>
-        <h2>PROPAGANDA</h2>
+    <div class="top animate__animated"
+    :class="{'animate__fadeInDown ':active}">
+        <span class="animate__animated animate__slow"
+        :class="{'animate__fadeInLeft ':active}">ENTERPRISE</span>
+        <h2 class="animate__animated animate__slow"
+        :class="{'animate__fadeInLeft ':active}">PROPAGANDA</h2>
     </div>
     <div class="top-container">
-        <div class="left">
-            <div>
-                <span class="title">公司目標</span>
+        <div class="left" >
+            <div class="animate__animated animate__slow"
+            :class="{'animate__fadeInLeftBig ':active}">
+                <span class="title">企業目標</span>
                 <span class="sub-title">/COMPANY GOAL</span>
             </div>
             <div>
-                <div class="top-canvas"></div>
+                <div class="top-canvas animate__animated animate__slow"
+                :class="{'animate__fadeInLeftBig ':active}"></div>
             </div>
         </div>
         <div class="right">
@@ -23,10 +28,12 @@
     <div class="mid">
         <div class="content"
         v-for="item in data" :key="item.index">
-            <div class="img-container">
+            <div class="img-container animate__animated animate__slow"
+            :class="{'animate__fadeInLeft ':active}">
                 <img :src="item.img" alt="品牌設計">
             </div>
-            <div class="content-content">
+            <div class="content-content animate__animated animate__slow"
+            :class="{'animate__fadeInRight ':active}">
                 <p class="title">
                     {{ item.title}}
                 </p>
@@ -36,11 +43,13 @@
             </div>
         </div>
     </div>
-    <div class="bottom">
+    <div class="bottom animate__animated animate__slow"
+    :class="{'animate__slideInLeft':active}">
         <span>
             泳欣事業有限公司
         </span>
-        <span class="canvas animate__animated animate__slideInRight"></span>
+        <span class="canvas animate__animated animate__slow"
+        :class="{'animate__fadeInRightBig':active}"></span>
         <button v-on:click=pageMove()>
             < < 返回目錄
         </button>

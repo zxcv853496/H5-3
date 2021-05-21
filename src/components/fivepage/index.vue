@@ -41,6 +41,7 @@ export default {
     };
   },
     props: [
+        'active',
         'pageBackIndex'
     ],
     methods:{

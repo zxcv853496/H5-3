@@ -16,22 +16,32 @@ export default {
                     page:'4'
                 },
                 {
-                    title:'公司產品',
+                    title:'公司產品-名片',
                     page:'5'
                 },
                 {
-                    title:'項目案例',
+                    title:'公司產品-網頁',
                     page:'6'
                 },
                 {
-                    title:'聯繫我們',
+                    title:'公司產品-網頁',
                     page:'7'
+                },
+                
+                {
+                    title:'方案選購',
+                    page:'8'
+                },
+                {
+                    title:'聯繫我們',
+                    page:'9'
                 }
             ]
         }
     },
     props:[
         'pageMoveto',
+        'active',
     ],
     methods:{
         thispageMoveto(index){

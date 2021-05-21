@@ -1,0 +1,82 @@
+<div class="eightpage">
+    <div class="top animate__animated"
+    :class="{'animate__fadeInDown ':active}">
+        <span class="animate__animated animate__slow"
+        :class="{'animate__fadeInLeft ':active}">ENTERPRISE</span>
+        <h2 class="animate__animated animate__slow"
+        :class="{'animate__fadeInLeft ':active}">PROPAGANDA</h2>
+    </div>
+    <div class="top-container">
+        <div class="left" >
+            <div class="animate__animated animate__slow"
+            :class="{'animate__fadeInLeftBig ':active}">
+                <span class="title">方案選購</span>
+                <span class="sub-title">/PROJECT SELECT</span>
+            </div>
+            <div>
+                <div class="top-canvas animate__animated animate__slow"
+                :class="{'animate__fadeInLeftBig ':active}"></div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="top-right-canvas"></div>
+            <div class="top-right-canvas"></div>
+            <div class="top-right-canvas"></div>
+            <div class="top-right-canvas"></div>
+        </div>
+    </div>
+    <div class="mid">
+        <div class="container animate__animated animate__slower"
+        :class="{'animate__slideInUp':active}">
+            <input type="text" name="name" placeholder="姓名">
+        </div>
+        <div class="container animate__animated animate__slower"
+        :class="{'animate__slideInUp':active}">
+            <input type="text" name="phone" placeholder="電話">
+        </div>
+        <div class="container animate__animated animate__slower"
+        :class="{'animate__slideInUp':active}">
+            <input type="text" name="email" placeholder="信箱">
+        </div>
+        <div class="container animate__animated animate__slower"
+        :class="{'animate__slideInUp':active}">
+            <input type="text" name="name" placeholder="姓名">
+        </div>
+        <div class="container animate__animated animate__slower"
+        :class="{'animate__slideInUp':active}">
+            <select id="select-value">
+                <option v-for=" item in options" :key="item.index">
+                    {{item}}
+                </option>
+            </select>
+        </div>
+        <div class="recaptcha-container animate__animated animate__slower"
+        :class="{'animate__slideInUp':active}" >
+            <div
+                class="g-recaptcha"
+                data-sitekey="6Lf6BakaAAAAAARjNiUzTxZW6tSWVT5U_FP3uLNc"
+                data-theme="light" data-size="normal"
+                data-callback="verify"
+                data-expired-callback="expired"
+                data-error-callback="error">
+            </div>
+        </div>  
+        <div class="container animate__animated animate__slower"
+        :class="{'animate__slideInUp':active}">
+            <button>
+                提交
+            </button>
+        </div>
+    </div>
+    <div class="bottom animate__animated animate__slow"
+    :class="{'animate__slideInLeft':active}">
+        <span>
+            泳欣事業有限公司
+        </span>
+        <span class="canvas animate__animated animate__slow"
+        :class="{'animate__fadeInRightBig':active}"></span>
+        <button v-on:click=pageMove()>
+            < < 返回目錄
+        </button>
+    </div>
+  </div>

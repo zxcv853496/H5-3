@@ -1,27 +1,33 @@
 <template>
   <div id="app">
       <full-page :options="options" ref="fullpage" >
-        <div class="section" >
-          <Mainpage/>
+        <div class="section"  >
+          <Mainpage :active="active"/>
         </div>  
         <div class="section" >
-          <Twopage :pageMoveto="pageMoveto"/>
+          <Twopage :pageMoveto="pageMoveto" :active="active"/>
         </div>         
         <div class="section" >
-          <Threepage :pageBackIndex="pageBackIndex"/>
+          <Threepage :pageBackIndex="pageBackIndex" :active="active"/>
         </div>      
         <div class="section" >
-          <Fourpage :pageBackIndex="pageBackIndex"/>
+          <Fourpage :pageBackIndex="pageBackIndex" :active="active"/>
         </div>     
         <div class="section" >
-          <Fivepage :pageBackIndex="pageBackIndex"/>
+          <Fivepage :pageBackIndex="pageBackIndex" :active="active"/>
         </div>    
         <div class="section" >
-          <Sixpage :pageBackIndex="pageBackIndex"/>
+          <Sixpage :pageBackIndex="pageBackIndex" :active="active"/>
         </div>     
         <div class="section" >
-          <Sevenpage :pageBackIndex="pageBackIndex"/>
+          <Sevenpage :pageBackIndex="pageBackIndex" :active="active"/>
         </div>     
+        <div class="section" >
+          <Eightpage :pageBackIndex="pageBackIndex" :active="active"/>
+        </div>    
+        <div class="section" >
+          <Ninepage :pageBackIndex="pageBackIndex" :active="active"/>
+        </div>    
       </full-page>
   </div>
 </template>
@@ -35,10 +41,13 @@ import Fourpage from './components/fourpage/index'
 import Fivepage from './components/fivepage/index'
 import Sixpage from './components/sixpage/index'
 import Sevenpage from './components/sevenpage/index'
+import Eightpage from './components/eightpage/index'
+import Ninepage from './components/ninepage/index'
 
 export default {
   data(){
     return {
+      active:false,
       options: {
         licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
         //是否顯示導航，預設為false
@@ -63,7 +72,9 @@ export default {
     Fourpage,
     Fivepage,
     Sixpage,
-    Sevenpage
+    Sevenpage,
+    Eightpage,
+    Ninepage,
   },
   methods:{
     pageBackIndex(){
@@ -72,6 +83,18 @@ export default {
     pageMoveto(index){
       this.$refs.fullpage.api.moveTo(index);
     },
+    movePage(){
+      
+      this.active =! this.active
+      
+      console.log(this.active)
+    },
+    movePageAfter(){
+      
+      this.active =! this.active
+      
+      console.log(this.active)
+    }
   }
 }
 </script>
