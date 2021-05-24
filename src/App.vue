@@ -1,14 +1,28 @@
 <template>
-  <div id="app">
-      <full-page :options="options" ref="fullpage" >
+  <div id="app"
+  @touchstart="touchStarAudio">
+      <div class="topcover" :class="{'active' : !active}"></div>
+        <audio id="audio" autoplay>
+            <source src="/music/GetUp by RazBurg Artlist.wav" type="audio/mpeg">
+        </audio>
+        <button class="btn-music" id="btn-music"
+        :class="{'paused':btnPuased}"
+        @click="audioAutoPlay">
+              <i class="fas fa-music"></i>
+        </button>
+        <div class="arrow-up">
+          <i class="fas fa-angle-double-up"></i>
+        </div>
+      <full-page :options="options" ref="fullpage"  >
         <div class="section"  >
           <Mainpage :active="active"/>
         </div>  
-        <div class="section" >
-          <Twopage :pageMoveto="pageMoveto" :active="active"/>
+        <div class="section" 
+        @mousemove="touchStarAudio">
+          <Twopage  :pageMoveto="pageMoveto" :active="active"/>
         </div>         
         <div class="section" >
-          <Threepage :pageBackIndex="pageBackIndex" :active="active"/>
+          <Threepage :pageBackIndex="pageBackIndex" :active="active" />
         </div>      
         <div class="section" >
           <Fourpage :pageBackIndex="pageBackIndex" :active="active"/>
@@ -47,6 +61,8 @@ import Ninepage from './components/ninepage/index'
 export default {
   data(){
     return {
+      mobilAudio:false,
+      btnPuased:true,
       active:false,
       options: {
         licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
@@ -76,6 +92,15 @@ export default {
     Eightpage,
     Ninepage,
   },
+  watch: {
+    mobilAudio: function() {
+        var audio = document.getElementById('audio');
+        audio.play();
+        if (!audio.paused){
+          this.btnPuased = false;
+        }
+    }
+  },
   methods:{
     pageBackIndex(){
       this.$refs.fullpage.api.moveTo(2);
@@ -94,6 +119,22 @@ export default {
       this.active =! this.active
       
       console.log(this.active)
+    },
+    ///audio監聽
+    audioAutoPlay(){
+      var audio = document.getElementById('audio');
+      if (audio.paused){
+        console.log(123)
+        audio.play();
+        this.btnPuased = false;
+      }
+      else {
+        audio.pause();
+        this.btnPuased = true;
+      }
+    },
+    touchStarAudio(){
+      this.mobilAudio = true;
     }
   }
 }

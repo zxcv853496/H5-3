@@ -120,10 +120,7 @@
         flex-direction: column;
         .top{
             display: flex;
-            height: 35%;
-            @media (min-width:768px) {
-                height: 40%;
-            }
+            height: 40%;
             .right{
                 display: flex;
                 flex-direction: column;
@@ -173,10 +170,12 @@
             }
         }
         .bottom{
+            height: 250px;
             flex-grow: 1;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            
             .container{
                 height: 80%;
                 width: 49%;

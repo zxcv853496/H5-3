@@ -1,6 +1,7 @@
 <div class="mainpage">
 
-    <div class="top-canvas">
+    <div class="top-canvas animate__animated"
+    :class="{'animate__fadeIn':active}">
         <div class="top animate__animated animate__slow"
         :class="{'animate__fadeInDown':active}">
             <span class="top-text">
@@ -31,8 +32,8 @@
         </div>
     </div>
     <div class="mid-img">
-        <div
-        :class="{'active':mid_active}">
+        <div class="animate__animated animate__slow"
+        :class="{'active':mid_active , 'animate__fadeIn':active}">
             <img src="/img/mainpage/back-banner.png" alt="">
         </div>
     </div>

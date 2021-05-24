@@ -13,3 +13,72 @@ body{
         border-bottom: none;
     }
 }
+
+.topcover{
+    width: 100%;
+    height: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    bottom: 0;
+    border: 2px solid black;
+    border-bottom: none;
+    border-top: none;
+    background-image: url('/img/mainpage/1.jpg');
+    background-repeat: no-repeat;
+    background-size: 325%;
+    transition: all .3s;
+    opacity: 0;
+    &.active{
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+#app{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.arrow-up{
+    position: fixed;
+    bottom: 10%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    pointer-events:none;
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    i{
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 2rem;
+        animation: arrowMove 2.5s infinite;
+        @media (min-width:768px) {
+            font-size: 3rem;
+        }
+        @keyframes arrowMove {
+            0%{
+                transform: translate3d(0,20px,0);
+                opacity: 1;
+            }
+            50%{
+                transform: translate3d(0,-30px,0);
+                opacity: 0;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+    };
+    
+}
