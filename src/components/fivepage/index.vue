@@ -20,22 +20,22 @@ export default {
         },
         list:[
             {
-                img:'/img/fivepage/card1.jpg'
+                img:'/H5/3/img/fivepage/card1.jpg'
             },
             {
-                img:'/img/fivepage/card2.jpg'
+                img:'/H5/3/img/fivepage/card2.jpg'
             },
             {
-                img:'/img/fivepage/card3.jpg'
+                img:'/H5/3/img/fivepage/card3.jpg'
             },
             {
-                img:'/img/fivepage/card4.jpg'
+                img:'/H5/3/img/fivepage/card4.jpg'
             },
             {
-                img:'/img/fivepage/card5.jpg'
+                img:'/H5/3/img/fivepage/card5.jpg'
             },
             {
-                img:'/img/fivepage/card6.jpg'
+                img:'/H5/3/img/fivepage/card6.jpg'
             },
         ]
     };

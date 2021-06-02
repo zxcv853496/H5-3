@@ -13,12 +13,14 @@
                 <span class="title">方案選購</span>
                 <span class="sub-title">/PROJECT SELECT</span>
             </div>
-            <div>
+            <div class="animate__animated animate__slow"
+            :class="{'animate__fadeIn ':active}">
                 <div class="top-canvas animate__animated animate__slow"
                 :class="{'animate__fadeInLeftBig ':active}"></div>
             </div>
         </div>
-        <div class="right">
+        <div class="right animate__animated animate__slow"
+        :class="{'animate__zoomIn ':active}">
             <div class="top-right-canvas"></div>
             <div class="top-right-canvas"></div>
             <div class="top-right-canvas"></div>
@@ -37,10 +39,6 @@
         <div class="container animate__animated animate__slower"
         :class="{'animate__slideInUp':active}">
             <input type="text" name="email" placeholder="信箱">
-        </div>
-        <div class="container animate__animated animate__slower"
-        :class="{'animate__slideInUp':active}">
-            <input type="text" name="name" placeholder="姓名">
         </div>
         <div class="container animate__animated animate__slower"
         :class="{'animate__slideInUp':active}">

@@ -1,5 +1,6 @@
 <div class="twopage">
-    <div class="top">
+    <div class="top"
+    :class="{'animate__animated animate__fadeInDown ':active}">
         <h2>目錄</h2>
         <span>/CATALOG</span>
     </div>
@@ -11,7 +12,8 @@
             <span>{{item.title}}</span><span>{{item.page}}</span>
         </div>
     </div>
-    <div class="bottom">
+    <div class="bottom"
+    :class="{'animate__animated animate__fadeInUp ':active}">
         - 泳欣事業有限公司 -
     </div>
 </div>

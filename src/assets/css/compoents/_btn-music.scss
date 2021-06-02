@@ -12,9 +12,10 @@
     padding: 0;
     animation: btnMusicAni 3s infinite linear;
     @media (min-width:769px) {
-        width: 4rem;
-        height: 4rem;
+        width: 3rem;
+        height: 3rem;
         top: 5px;
+        right: 5px;
     }
     &:hover{
         cursor: pointer;
@@ -27,17 +28,17 @@
         color: #fff;
         font-size: 1rem;
         position: absolute;
-        top: -0.125rem;
-        left: -0.125rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
         @media (min-width:769px) {
             font-size: 2rem;
-            top: 0.875rem;
-            left: 0.875rem;
+
         }
     }
     &.paused {
         opacity: 0.4;
-        animation: none;
+        animation-play-state: paused;
     }
 }
 

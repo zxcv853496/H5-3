@@ -13,12 +13,14 @@
                 <span class="title">公司簡介</span>
                 <span class="sub-title">/COMPANY PROFILE</span>
             </div>
-            <div>
+            <div class="animate__animated animate__slow"
+            :class="{'animate__fadeIn ':active}">
                 <div class="top-canvas animate__animated animate__slow"
                 :class="{'animate__fadeInLeftBig ':active}"></div>
             </div>
         </div>
-        <div class="right">
+        <div class="right animate__animated animate__slow"
+        :class="{'animate__zoomIn ':active}">
             <div class="top-right-canvas"></div>
             <div class="top-right-canvas"></div>
             <div class="top-right-canvas"></div>
@@ -28,7 +30,7 @@
     <div class="mid">
         <div class="img-container animate__animated animate__slow"
         :class="{'animate__zoomIn':active}" >
-            <img src="/img/threepage/2.jpg" alt="">
+            <img src="/H5/3/img/threepage/2.jpg" alt="">
         </div>
         <div class="content animate__animated animate__slow"
         :class="{'animate__slideInRight':active}">

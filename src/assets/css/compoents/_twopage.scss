@@ -2,9 +2,10 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    background-image: url('/img/mainpage/1.jpg');
+    background-image: url('/H5/3/img/mainpage/1.jpg');
     background-repeat: no-repeat;
     background-size: 325%;
+    overflow: hidden;
     .top{
         height: 75px;
         color: white;
@@ -13,7 +14,7 @@
         align-items: center;
         background-position: bottom left;
         background-position-x: -90px;
-        background-image: url('/img/twopage/1.jpg');
+        background-image: url('/H5/3/img/twopage/1.jpg');
         
         border-bottom: 2px solid $main-color;
         @media (min-width:768px) {

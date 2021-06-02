@@ -3,12 +3,12 @@
   @touchstart="touchStarAudio">
       <div class="topcover" :class="{'active' : !active}"></div>
         <audio id="audio" autoplay>
-            <source src="/music/GetUp by RazBurg Artlist.wav" type="audio/mpeg">
+            <source :src="require('@/assets/music/GetUp by RazBurg Artlist.wav')" type="audio/mpeg">
         </audio>
         <button class="btn-music" id="btn-music"
         :class="{'paused':btnPuased}"
         @click="audioAutoPlay">
-              <i class="fas fa-music"></i>
+              <i class="material-icons md-18">music_note</i>
         </button>
         <div class="arrow-up">
           <i class="fas fa-angle-double-up"></i>

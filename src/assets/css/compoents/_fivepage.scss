@@ -3,7 +3,7 @@
     overflow: hidden;
     flex-direction: column;
     height: 100%;
-    background-image: url('/img/mainpage/1.jpg');
+    background-image: url('/H5/3/img/mainpage/1.jpg');
     background-repeat: no-repeat;
     background-size: 325%;
     >.top{
@@ -15,7 +15,7 @@
         justify-content: center;
         background-position: bottom left;
         background-position-x: -80px;
-        background-image: url('/img/twopage/1.jpg');
+        background-image: url('/H5/3/img/twopage/1.jpg');
         
         border-bottom: 2px solid $main-color;
         @media (min-width:768px) {
@@ -32,12 +32,14 @@
         padding: 10px;
         padding-bottom: 0;
         margin-bottom: 10px;
+        padding-left: 0;
 
         .left{
             width: 70%;
             div:nth-child(1){
                 margin: 5px 0;
                 .title{
+                    padding-left: 10px;
                     font-size: 5vmin;
                     font-weight: 700;
                     @media (min-height:1400px) {
